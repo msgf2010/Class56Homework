@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Class56.Data.Image>
+<h1>Home Page</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Image</th>
+        <th>Description</th>
+        <th>Views</th>
+    </tr>
+
+    @foreach (var image in Model)
+    {
+        <tr>
+            <td>@image.Id</td>
+            <td>
+                <img style="width: 200px;" src="/UploadedImages/@image.FileName" />
+            </td>
+            <td>
+                @image.Description
+            </td>
+            <td>
+                @image.Views
+            </td>
+        </tr>
+    }
+</table>
